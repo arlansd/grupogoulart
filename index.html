@@ -8,47 +8,44 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
     :root {
-      --marrom-escuro: #5A3E2B;
-      --marrom-medio: #8C6B4A;
-      --marrom-claro: #CBB994;
-      --bege: #F7F3EB;
-      --dourado: #D4AF37;
+      --marrom-escuro: #3b2414;
+      --marrom-medio: #5a3e2b;
+      --marrom-claro: #a8926a;
+      --bege: #ede7df;
+      --dourado: #c9a13a;
       --branco: #fff;
     }
 
-    /* Fundo com textura couro clara e degradê */
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
       background:
         url('https://www.transparenttextures.com/patterns/pw-maze-white.png') repeat,
-        linear-gradient(135deg, var(--marrom-claro), var(--bege));
-      color: var(--marrom-escuro);
+        linear-gradient(135deg, var(--marrom-escuro), var(--marrom-medio));
+      color: var(--bege);
       min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     /* Menu */
     header {
       position: sticky;
       top: 0;
-      background: transparent;
+      background: var(--marrom-escuro);
       z-index: 1000;
-      box-shadow: 0 1px 8px #0002;
+      box-shadow: 0 1px 8px #0005;
     }
     .menu {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 5vw;
+      padding: 16px 5vw;
       max-width: 1100px;
       margin: 0 auto;
     }
     .logo {
-      font-size: 2.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      color: var(--marrom-escuro);
+      color: var(--bege);
       letter-spacing: 2px;
       user-select: none;
     }
@@ -57,7 +54,7 @@
       gap: 28px;
     }
     nav a {
-      color: var(--marrom-escuro);
+      color: var(--bege);
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
@@ -77,12 +74,12 @@
     .hamburger span {
       width: 28px;
       height: 3px;
-      background: var(--marrom-escuro);
+      background: var(--bege);
       border-radius: 2px;
       transition: 0.3s;
     }
 
-    /* Hero */
+    /* HERO */
     .hero {
       position: relative;
       display: flex;
@@ -91,14 +88,14 @@
       justify-content: center;
       min-height: 420px;
       padding: 0 5vw 32px 5vw;
-      background: linear-gradient(135deg, var(--marrom-claro)cc 60%, var(--bege)cc 100%);
-      color: var(--marrom-escuro);
+      background: linear-gradient(135deg, #3b2414ee 60%, #5a3e2bcc 100%);
+      color: var(--bege);
       text-align: center;
       overflow: hidden;
       max-width: 1100px;
       margin: 0 auto 40px auto;
       border-radius: 14px;
-      box-shadow: 0 4px 12px #0002;
+      box-shadow: 0 4px 12px #0005;
     }
     /* Deusa Têmis centralizada atrás do texto */
     .hero::before {
@@ -106,15 +103,15 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 280px;
-      height: 280px;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Justitia_Statue_Brandenburg_Gate_Berlin_2012-06-29_001.jpg/320px-Justitia_Statue_Brandenburg_Gate_Berlin_2012-06-29_001.jpg') no-repeat center/contain;
-      opacity: 0.1;
+      width: 260px;
+      height: 260px;
+      background: url('https://pngimg.com/d/themis_PNG17.png') no-repeat center/contain;
+      opacity: 0.07;
       transform: translate(-50%, -50%);
       pointer-events: none;
       z-index: 1;
       border-radius: 14px;
-      filter: grayscale(70%) brightness(130%);
+      filter: grayscale(60%) brightness(120%);
     }
     /* Balança canto superior esquerdo */
     .hero::after {
@@ -122,10 +119,10 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 120px;
-      height: 120px;
-      background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
-      opacity: 0.15;
+      width: 100px;
+      height: 100px;
+      background: url('https://cdn-icons-png.flaticon.com/512/1055/1055646.png') no-repeat center/contain;
+      opacity: 0.13;
       pointer-events: none;
       z-index: 1;
     }
@@ -134,10 +131,10 @@
       position: absolute;
       bottom: 20px;
       right: 20px;
-      width: 100px;
-      height: 100px;
-      background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
-      opacity: 0.15;
+      width: 80px;
+      height: 80px;
+      background: url('https://cdn-icons-png.flaticon.com/512/1055/1055687.png') no-repeat center/contain;
+      opacity: 0.13;
       pointer-events: none;
       z-index: 1;
       filter: brightness(0.7);
@@ -148,23 +145,24 @@
       max-width: 800px;
     }
     .hero-title {
-      font-size: 3rem;
+      font-size: 2.4rem;
       font-weight: 700;
       margin-bottom: 12px;
       letter-spacing: 2px;
       user-select: none;
+      color: var(--bege);
     }
     .hero-subtitle {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: 500;
       margin-bottom: 10px;
-      color: var(--marrom-medio);
+      color: var(--marrom-claro);
       user-select: none;
     }
     .hero-desc {
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       margin-bottom: 24px;
-      color: var(--marrom-escuro);
+      color: var(--bege);
       user-select: none;
     }
     .selos {
@@ -175,8 +173,8 @@
       user-select: none;
     }
     .selo {
-      background: var(--marrom-medio);
-      color: var(--dourado);
+      background: var(--marrom-claro);
+      color: var(--marrom-escuro);
       border-radius: 24px;
       padding: 10px 22px;
       font-weight: 700;
@@ -191,7 +189,6 @@
       font-size: 1.3rem;
       color: var(--dourado);
     }
-    /* Seções */
     main {
       padding: 0 5vw 48px 5vw;
       max-width: 1100px;
@@ -201,14 +198,14 @@
       text-align: center;
       font-size: 2rem;
       font-weight: 700;
-      color: var(--marrom-escuro);
+      color: var(--bege);
       margin-bottom: 24px;
       user-select: none;
     }
     /* Valores */
     .valores {
-      background: var(--marrom-claro);
-      color: var(--marrom-escuro);
+      background: var(--marrom-medio);
+      color: var(--bege);
       border-radius: 14px;
       padding: 32px 24px;
       margin-bottom: 38px;
@@ -217,7 +214,7 @@
       margin-right: auto;
       text-align: center;
       font-size: 1.15rem;
-      box-shadow: 0 4px 12px #0002;
+      box-shadow: 0 4px 12px #0004;
       user-select: none;
     }
     /* Áreas de Atuação */
@@ -229,7 +226,7 @@
       margin-bottom: 48px;
     }
     .area {
-      background: var(--bege);
+      background: var(--marrom-claro);
       color: var(--marrom-escuro);
       border-radius: 14px;
       padding: 22px 18px 18px 18px;
@@ -284,7 +281,7 @@
       margin-bottom: 48px;
     }
     .servico {
-      background: var(--bege);
+      background: var(--marrom-claro);
       color: var(--marrom-escuro);
       border-radius: 14px;
       padding: 20px 16px 16px 16px;
@@ -320,17 +317,17 @@
       align-items: center;
       margin-bottom: 48px;
       text-align: center;
-      color: var(--marrom-escuro);
+      color: var(--bege);
       user-select: none;
     }
     .advogada-info h3 {
       margin: 0 0 8px 0;
       font-size: 1.3rem;
-      color: var(--marrom-escuro);
+      color: var(--bege);
     }
     .advogada-info p {
       margin: 0 0 8px 0;
-      color: var(--marrom-medio);
+      color: var(--marrom-claro);
     }
     /* Depoimentos */
     .depoimentos-lista {
@@ -341,7 +338,7 @@
       margin-bottom: 48px;
     }
     .depoimento {
-      background: var(--marrom-claro);
+      background: var(--marrom-medio);
       border-radius: 14px;
       box-shadow: 0 2px 10px #0004;
       padding: 22px 18px;
@@ -352,7 +349,7 @@
       align-items: center;
       gap: 10px;
       text-align: center;
-      color: var(--marrom-escuro);
+      color: var(--bege);
       user-select: none;
       transition: background 0.3s ease;
     }
@@ -365,12 +362,12 @@
       height: 48px;
       border-radius: 50%;
       background: url('https://randomuser.me/api/portraits/men/32.jpg') center/cover;
-      border: 2px solid var(--marrom-medio);
+      border: 2px solid var(--marrom-claro);
       margin-bottom: 6px;
       flex-shrink: 0;
     }
     .depoimento strong {
-      color: var(--marrom-medio);
+      color: var(--marrom-claro);
       font-size: 1.1rem;
     }
     /* Contato em duas colunas */
@@ -386,7 +383,7 @@
       margin-right: auto;
     }
     .formulario-area {
-      background: var(--bege);
+      background: var(--marrom-claro);
       border-radius: 14px;
       padding: 32px 24px;
       box-shadow: 0 2px 14px #0002;
@@ -428,7 +425,7 @@
     }
     .contato-info {
       max-width: 350px;
-      background: var(--bege);
+      background: var(--marrom-claro);
       border-radius: 14px;
       padding: 32px 24px;
       box-shadow: 0 2px 14px #0002;
@@ -455,7 +452,6 @@
     .contato-info a:hover {
       color: var(--dourado);
     }
-    /* Responsividade */
     @media (max-width: 900px) {
       .areas,
       .servicos,
@@ -480,7 +476,7 @@
         position: absolute;
         top: 60px;
         right: 5vw;
-        background: var(--marrom-claro);
+        background: var(--marrom-medio);
         backdrop-filter: blur(8px);
         border-radius: 10px;
         flex-direction: column;
@@ -498,17 +494,17 @@
     }
     @media (max-width: 480px) {
       .hero-title {
-        font-size: 2.2rem;
+        font-size: 1.5rem;
       }
       .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .section-title {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
       }
       .formulario-area,
       .contato-info {
-        padding: 20px 16px;
+        padding: 20px 10px;
       }
     }
   </style>
@@ -518,7 +514,7 @@
     <div class="menu">
       <span class="logo">Grupo Goulart</span>
       <nav>
-        <a href="#valores">Valores</a>
+        <a href="#valores">Nossos Valores</a>
         <a href="#areas">Áreas de Atuação</a>
         <a href="#servicos">Serviços</a>
         <a href="#advogada">Advogada</a>
@@ -551,7 +547,7 @@
 
   <main>
     <section id="valores">
-      <div class="section-title">Valores do Grupo Goulart</div>
+      <div class="section-title">Nossos Valores</div>
       <div class="valores">
         O Grupo Goulart é referência em advocacia especializada, unindo tradição, ética e inovação. Nossa equipe altamente qualificada garante atendimento personalizado, soluções eficientes e total transparência em cada etapa do processo. Compromisso com resultados e excelência técnica é o que nos diferencia no mercado há mais de 30 anos.
       </div>
@@ -614,7 +610,7 @@
           <h3>Samantha Maguetta - OAB 130639/SP</h3>
           <p>Mais de 900 processos ativos na defesa do consumidor bancário.</p>
           <p>Atuação estratégica e solucionadora de problemas, com eficiência em âmbito extrajudicial e judicial.</p>
-          <p>Consultoria especializada em direito bancário e criminal, com 25 anos de experiência.</p>
+          <p>Consultoria especializada em direito bancário, com 25 anos de experiência.</p>
         </div>
       </div>
     </section>
